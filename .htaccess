@@ -1,0 +1,8 @@
+#Restringimos el acceso a los directorios
+Options All -Indexes
+
+#añadimos Sobre escritura. Para permitir un regla de sobreescritura
+RewriteEngine On
+
+#añadimos la regla de sobre escritura
+RewriteRule ^([-a-zA-Z0-9/]+)$ index.php?ruta=$1
