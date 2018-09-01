@@ -22,9 +22,9 @@
 
   <?php
     //inicializa una sesión
-    session_start();
     //$_SESSION["algo"] => Son variables GLOBALES para creación de sesiones.
-    $_SESSION["autenticar"] = true;
+    session_start();
+
 
     if (isset($_SESSION["autenticar"]) && $_SESSION["autenticar"] == true) {
       echo '<div class="wrapper">';
@@ -38,17 +38,26 @@
         $enrutamiento = new ControladorEnrutamiento();
         $enrutamiento -> traerRuta();
 
+        include "modulos/modales/modal-".$_GET["ruta"].".php";
+
+
       } else {
         include "modulos/inicio.php";
       }
+
 
     
     include "modulos/pie-de-pagina.php";
     echo '<div>';
 
+
+
+
+
     } else {
       include "modulos/login.php";
     }
+
 
 
     
@@ -63,6 +72,7 @@
 <script src="vistas/bower_components/jquery/dist/jquery.min.js"></script>
 <script src="vistas/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 <script src="vistas/dist/js/adminlte.min.js"></script>
+<script src="vistas/dist/js/gestionarTareas.js"></script>
 
 </body>
 </html>

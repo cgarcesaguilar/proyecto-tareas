@@ -7,7 +7,8 @@ Class ControladorEnrutamiento {
 		if ($enlace == "inicio" ||
 			$enlace == "usuarios" ||
 			$enlace == "tareas" ||
-			$enlace == "mis-tareas" ) {
+			$enlace == "mis-tareas" ||
+			$enlace == "salir" ) {
 			include "vistas/modulos/".$enlace.".php";
 		} else {
 			include "vistas/modulos/error404.php";

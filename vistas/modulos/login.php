@@ -23,6 +23,11 @@
         </div>
         <!-- /.col -->
       </div>
+        <?php
+          $iniciarSesion = new InicioSesion();
+          $iniciarSesion -> ctrIniciarSesion();
+        ?>
+
     </form>
 
     
